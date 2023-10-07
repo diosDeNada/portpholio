@@ -1,0 +1,8 @@
+el portafolio debe contener:
+-descripcion breve sobre mi
+-foto
+-habilidades
+-educacion
+-proyectos
+-animaciones
+-contacto
