@@ -19,23 +19,95 @@
 
 <body>
 
-  <header>
-    <h1>Arie Gonz Aguer</h1>
+  <!-- Header + Nav section -->
+  <header id="header" class="sombraHeader lineaHeader">
+    <h1 class="tracking-in-expand">Arie Gonz Aguer</h1>
     <h2>Web Development, Design and Solutions</h2>
     <nav>
       <ul>
-        <li>Proyectos</li>
-        <li>Sobre mi</li>
-        <li>Contacto</li>
+        <li class="wobble-hor-bottom"><a href="#projects">Projects</a></li>
+        <li class="wobble-hor-bottom"><a href="contact">Contact</a></li>
       </ul>
     </nav>
-    <button id="claroOscuro">Claro</button><br>
-    <span id="claro">Claro</span>
-    <input type="range" id="claridad" min="1" max="3" step="1" value="1">
-    <span id="oscuro">Oscuro</span>
+
+    <div id="modoColor">
+      <label for="colorPagina"></label>
+      <img src="resources\icons\sun_ligthMode.png" alt="ícono modo claro" class="iconoModo">
+      <input type="range" id="colorPagina" name="colorPagina" min="0" max="1" value="0" />
+      <img src="resources\icons\moon_darMode.png" alt="ícono modo oscuro" class="iconoModo">
+    </div>
   </header>
 
   <main>
+    <!--About Me section-->
+    <section id="aboutMe">
+      <h2>Who is Arie?</h2>
+      <img src="resources\imgs\foto perfil2.jpg" alt="foto de Arie">
+      <p>Im a Costa Rica based entry level Front End Developer who enjoy simple and neat design.<br>
+        I'm also a seasoned Beer Brewer with more than 6 years of experience.<br>
+        I love my code and projects like my beer: Clean and Enjoyable.</p>
+    </section>
+
+    <!--Projects section-->
+    <section id="projects">
+      <h2>Look some of my recent projects</h2>
+      <div class="sliderIner"></div>
+
+      <div id="porto">
+      <h3><a href="https://diosdenada.github.io/Port-O-Burger/"></a>Port-O-Burger</a></h3>
+        <a href="https://diosdenada.github.io/Port-O-Burger/"><img class="imgProjects" src="resources\imgs\portoBig.png"
+            alt="foto de una hamburguesa"></a>
+        <p>It is the home page of a (fictional) vegan burger restaurant.
+For this project I use HTML, CSS and a little bit of JS.
+The high quality images were compressed to improve page performance, it is adapted for any screen size.<br>
+           </p>
+           <h4>Upcoming improvements:</h4>
+           <ul>
+           <li>-Some aesthetic details on the margin of the images.</li>
+           <li>-Reorganization of the sections to give focus to the menu.</li>
+           <li>-Reduction in the size of the images in the Ingredients section.</li>
+           <li>-Turn the menu into a "carousel" of elements.</li>
+           <li>-Improvements in Accessibility (Very important!).</li>
+           </ul>
+      </div>
+
+      <div id="sanMichi">
+      <h3><a href="https://diosdenada.github.io/VeterinariaSanMichi/"></a>Veterinaria San Michi</a></h3>
+        <a href="https://diosdenada.github.io/VeterinariaSanMichi/"><img class="imgProjects" src="resources\imgs\sanMichiBig.png"
+            alt="foto de la página principal de Veterinaria San Michi"></a>
+        <p>This is the main page of another fictional project: <b>Veterinaria San Michi.</b><br>
+For this project I use HTML, CSS and a little bit of JS -the core of Web Development.
+Within the page you can schedule an appointment, which generates an alert in the window. The project is also made to adapt correctly to the most used screens.<br>
+           </p>
+           <h4>Upcoming improvements:</h4>
+           <ul>
+           <li>-Add more interactivity with JS.</li>
+           <li>-Create the external Merchandise, Medications and Contact pages (at the moment they are only aesthetic, not functional).</li>
+           <li>-General improvements in terms of color.</li>
+           <li>-Improvements in Accessibility (Very important!).</li>
+           <li>-Significant improvements in performance.</li>
+           </ul>
+      </div>
+
+      <div id="calculadoras">
+      <h3><a href="https://diosdenada.github.io/Calculadoras-Practicas/"></a>Cálculos prácticos</a></h3>
+        <a href="https://diosdenada.github.io/Calculadoras-Practicas/"><img class="imgProjects" src="resources\imgs\calculadorasBig.png"
+            alt="foto de la página principal de Calculadoras Practicas"></a>
+        <p>This is one of the first projects that are usually carried out when learning Web Development, and even so, the result is very useful on a daily basis.<br>
+HTML, CSS and a JS are the technologies involved in this project.
+The project is also made to adapt correctly to the most used screens.<br>
+           </p>
+           <h4>Upcoming improvements:</h4>
+           <ul>
+           <li>-More calculators.</li>
+           <li>-Design improvements.</li>
+           </ul>
+      </div>
+
+
+
+    <!--Contact section-->
+    <section id="contact"></section>
 
   </main>
 

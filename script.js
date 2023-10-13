@@ -1,37 +1,27 @@
 // Constantes
-const btn = document.getElementById("claroOscuro");
-let isClicked = false;
 const claridadBtn = document.getElementById("claridad");
+const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces dentro de "nav"
+const header = document.getElementById("header");
+
+
 
 // Event listeners
-
-// btn.addEventListener('click', () => {
-//   if (isClicked) {
-//     btn.innerText = 'Claro';
-//     document.body.style.backgroundColor = "white"
-//     document.body.style.color = "black";
-//   } else {
-//     btn.innerText = 'Oscuro';
-//     document.body.style.backgroundColor = "black"
-//     document.body.style.color = "white";
-//   }
-//   isClicked = !isClicked;
-// });
-
-claridadBtn.addEventListener("input", () => {
-  if(claridad.value === "1") {
-    btn.innerText = 'Claro';
-     document.body.style.backgroundColor = "white";
-     document.body.style.color = "black";
-      console.log(claridadBtn.value);
-  } else if (claridad.value === "2") {
-  btn.innerText = 'Oscuro';
-     document.body.style.backgroundColor = "black";
-     document.body.style.color = "white";
-     console.log(claridadBtn.value);
-   } else {
-   document.body.style.backgroundColor = "rgb(250, 215, 221)";
-     document.body.style.color = "rgb(248, 127, 147)";
-      console.log(claridadBtn.value);
-   }
-  })
+colorPagina.addEventListener("input", () => {
+  if (colorPagina.value === "0") {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    navLinks.forEach((link) => {
+      link.style.color = "rgb(66, 66, 66)";
+    });
+    header.classList.add("sombraHeader");
+  } else {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    navLinks.forEach((link) => {
+      link.style.color = "pink";
+    });
+    header.classList.remove("sombraHeader");
+    document.body.style.mozBoxShadow = "none";
+    document.body.style.boxShadow = "none";
+  }
+});
