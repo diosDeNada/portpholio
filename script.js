@@ -2,10 +2,14 @@
 const claridadBtn = document.getElementById("claridad");
 const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces dentro de "nav"
 const header = document.getElementById("header");
+const flechas = document.getElementById("flechas");
+const sliderInner = document.getElementById("sliderInner");
 
 
 
 // Event listeners
+
+// modo claro/oscuro
 colorPagina.addEventListener("input", () => {
   if (colorPagina.value === "0") {
     document.body.style.backgroundColor = "white";
@@ -21,7 +25,23 @@ colorPagina.addEventListener("input", () => {
       link.style.color = "pink";
     });
     header.classList.remove("sombraHeader");
-    document.body.style.mozBoxShadow = "none";
-    document.body.style.boxShadow = "none";
   }
 });
+
+// cambio de flechas en slider
+sliderInner.addEventListener("scroll", () => {
+  const lastSlide = document.querySelector(".lastSlide");
+  if (lastSlide) {
+    const lastSlidePosition = lastSlide.getBoundingClientRect();
+
+    if ( // cuando se está en el último slide
+      lastSlidePosition.left >= 0 &&
+      lastSlidePosition.right <= (sliderInner.clientWidth || window.innerWidth)
+    ) {
+      flechas.textContent = '← ← ←';
+    } else { // cuando NO se está en el último slide
+      flechas.textContent = '→ → →';
+    }
+  }
+});
+
