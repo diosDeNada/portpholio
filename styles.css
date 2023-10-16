@@ -2,10 +2,11 @@
 /*2. Header + Nav styles*/
 /*3. About Me styles*/
 /*4. Projects styles*/
-/*5. Contact styles*/
-/*6. Footer styles*/
-/*7. Media queries*/
-/*8. Animations */
+/*5. More About Me styles */
+/*6. Contact styles*/
+/*7. Footer styles*/
+/*8. Media queries*/
+/*9. Animations */
 
 /*1. General styles*/
 * {
@@ -23,13 +24,15 @@ html {
 }
 
 h1 {
-  font-size: 1.9rem;
-  line-height: 4.5rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  padding: 1px 0;
 }
 
 h2 {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding: 1px 0;
 }
 
 li {
@@ -38,15 +41,20 @@ li {
 
 p {
   line-height: 1.5rem;
+  padding: 0 20px;
 }
 
 /*2. Header + Nav styles*/
 header {
   display: grid;
-  grid-template: 30% 30% 20% 20% / repeat(4, 25%);
-  height: 210px;
+  grid-template: 28% 27% 24% 21% / repeat(4, 25%);
+  height: 150px;
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
 .sombraHeader {
@@ -58,18 +66,25 @@ header {
   border-bottom: 2px white solid;
 }
 
+.neonHeader {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1), 0 0 15px rgba(255, 255, 255, 1), 0 0 20px #ff00de, 0 0 25px #ff00de;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
 header h1 {
   grid-area: 1/1/2/5;
 }
 
 header h2 {
   grid-area: 2/1/3/5;
-  font-size: 1.3rem;
 }
 
 nav {
   grid-area: 3/1/4/5;
-  margin: 5px auto;
+  margin: 0 auto;
 }
 
 header ul {
@@ -104,8 +119,8 @@ nav a {
 #aboutMe {
   display: grid;
   grid-template: 15% 85% / repeat(2, 1fr);
-  height: 450px;
-  margin: 0 5px 3rem;
+  height: 510px;
+  margin: 0 5px 80px;
 }
 
 #aboutMe img {
@@ -138,6 +153,7 @@ nav a {
 /*4. Projects styles*/
 #projects {
   height: auto;
+  margin-bottom: 80px;
 }
 
 #projects h3 {
@@ -148,7 +164,6 @@ nav a {
   height: auto;
   width: 400px;
   /*el tamañao de la img define, por algún motivo, el tamaño del div... por más que cambio el width del div, su ancho no cambia, a menos que cambie el width de la img*/
-  padding: auto;
   margin-bottom: 10px;
 }
 
@@ -157,24 +172,17 @@ nav a {
   line-height: 1.5rem;
 }
 
-#projects img {
-  width: 400px
-}
-
 #projects p {
   margin-bottom: 15px;
 }
 
-
 /* slider */
-
 #sliderInner {
   display: flex;
   overflow-y: auto;
 }
 
 #sliderInner div {
-
   height: auto;
   padding: 10px;
   display: block;
@@ -185,29 +193,120 @@ nav a {
   margin-bottom: 0 !important;
 }
 
+/*5. More About Me styles */
+#moreAboutMe {
+  margin-bottom: 80px;
+}
+
+#moreAboutMe p,
+#tecnologias h3 {
+  margin: 20px auto;
+}
+
+#tecnologias img {
+  height: 66px;
+  width: auto;
+  padding: 5px;
+}
+
+/*6. Contact styles*/
+#contact {
+  margin-bottom: 40px;
+}
+
+#futuro {
+  width: 90%;
+  margin: 5px auto;
+  height: auto;
+  padding: 15px;
+}
+
+.neonFuturo {
+  box-shadow: 0 0 3px rgba(255, 255, 255, 1), 0 0 6px rgba(255, 255, 255, 1), 0 0 9px rgba(255, 255, 255, 1), 0 0 12px #ff00de;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.contactos {
+  height: 66px;
+  width: auto;
+  padding: 5px;
+}
+
+/*7. Footer styles*/
+footer {
+  background-color: black;
+  color: white;
+  line-height: 30px;
+}
+
+footer p {
+  font-size: 0.75rem;
+}
+
+
+/*8. Media queries*/
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+#aboutMe {
+  width: 80%;
+  height: auto;
+  margin: 0 auto 80px;
+}
+
+#aboutMe p {
+  margin-top: 20px;
+}
+
+#aboutMe img {
+  border-radius: 5px;
+  width: auto;
+  height: 260px;
+  grid-area: 2/2/3/3;
+  margin: auto;
+}
+
+.imgProjects {
+  height: auto;
+  width: 745px;
+  /*el tamañao de la img define, por algún motivo, el tamaño del div... por más que cambio el width del div, su ancho no cambia, a menos que cambie el width de la img*/
+  margin-bottom: 10px;
+}
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  #aboutMe {
+  grid-template: 20% 80% / repeat(2, 1fr) ;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 80px;
+}
+
+#aboutMe h2 {
+  grid-area: 1/1/2/2;
+}
+
+#aboutMe p {
+  margin-top: 20px;
+  grid-area: 2/1/3/2;
+}
+
+#aboutMe img {
+  border-radius: 5px;
+  width: auto;
+  height: 300px;
+  grid-area: 2/2/3/3;
+  margin: auto;
+}
+ /* QUEDÉ POR ACÁ. CONTINUAR DESDE ACÁ */
+
+}
 
 
 
-
-/*5. Contact styles*/
-
-
-
-
-
-
-
-
-
-/*6. Footer styles*/
-/*7. Media queries*/
-
-
-
-
-
-
-/*8. Animations */
+/*9. Animations */
 /* animación para h1 header */
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -367,24 +466,208 @@ nav a {
 @-webkit-keyframes scale-in-hor-center {
   0% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     opacity: 1;
   }
 }
+
 @keyframes scale-in-hor-center {
   0% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     opacity: 1;
+  }
+}
+
+/* Animaciones About Me */
+.wobble-ver-right {
+  -webkit-animation: wobble-ver-right 1.5s 2s 3 both;
+  animation: wobble-ver-right 1.5s 2s 3 both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-14 18:23:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation wobble-ver-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes wobble-ver-right {
+
+  0%,
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    -webkit-transform: translateY(-30px) rotate(6deg);
+    transform: translateY(-30px) rotate(6deg);
+  }
+
+  30% {
+    -webkit-transform: translateY(15px) rotate(-6deg);
+    transform: translateY(15px) rotate(-6deg);
+  }
+
+  45% {
+    -webkit-transform: translateY(-15px) rotate(3.6deg);
+    transform: translateY(-15px) rotate(3.6deg);
+  }
+
+  60% {
+    -webkit-transform: translateY(9px) rotate(-2.4deg);
+    transform: translateY(9px) rotate(-2.4deg);
+  }
+
+  75% {
+    -webkit-transform: translateY(-6px) rotate(1.2deg);
+    transform: translateY(-6px) rotate(1.2deg);
+  }
+}
+
+@keyframes wobble-ver-right {
+
+  0%,
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    -webkit-transform: translateY(-30px) rotate(6deg);
+    transform: translateY(-30px) rotate(6deg);
+  }
+
+  30% {
+    -webkit-transform: translateY(15px) rotate(-6deg);
+    transform: translateY(15px) rotate(-6deg);
+  }
+
+  45% {
+    -webkit-transform: translateY(-15px) rotate(3.6deg);
+    transform: translateY(-15px) rotate(3.6deg);
+  }
+
+  60% {
+    -webkit-transform: translateY(9px) rotate(-2.4deg);
+    transform: translateY(9px) rotate(-2.4deg);
+  }
+
+  75% {
+    -webkit-transform: translateY(-6px) rotate(1.2deg);
+    transform: translateY(-6px) rotate(1.2deg);
+  }
+}
+
+.jello-vertical {
+  -webkit-animation: jello-vertical 1.5s 2s 3 both;
+  animation: jello-vertical 1.5s 2s 3 both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-14 18:27:3
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
