@@ -2,12 +2,15 @@
 const claridadBtn = document.getElementById("claridad");
 const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces dentro de "nav"
 const header = document.getElementById("header");
-const flechas = document.getElementById("flechas");
-const sliderInner = document.getElementById("sliderInner");
+const footer = document.querySelector("footer");
+
+
+const radioButtonsProjects = document.querySelectorAll('[name= "radioButtonsProjects"]');// Selecciona todos radio button
+const divsSlider = document.querySelectorAll('.divSlider');// Selecciona todos los divs del slider
+
+
 const suerteBtn = document.getElementById("suerte");
 const futuro = document.getElementById("futuro");
-const footer = document.querySelector("footer");
-const ocultar = document.querySelector(".hide")
 
 
 
@@ -43,21 +46,17 @@ colorPagina.addEventListener("input", () => {
   }
 });
 
-// cambio de flechas en slider
-sliderInner.addEventListener("scroll", () => {
-  const lastSlide = document.querySelector(".lastSlide");
-  if (lastSlide) {
-    const lastSlidePosition = lastSlide.getBoundingClientRect();
-
-    if ( // cuando se está en el último slide
-      lastSlidePosition.left >= 0 &&
-      lastSlidePosition.right <= (sliderInner.clientWidth || window.innerWidth)
-    ) {
-      flechas.textContent = '← ← ←';
-    } else { // cuando NO se está en el último slide
-      flechas.textContent = '→ → →';
-    }
-  }
+// movimiento del slider según radio button que se elija
+radioButtonsProjects.forEach((radioButton, index) => {
+  radioButton.addEventListener('change', () => {
+    divsSlider.forEach((div, divIndex) => {
+      if (index === divIndex) {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    });
+  });
 });
 
 // botón de la suerte

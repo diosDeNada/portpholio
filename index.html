@@ -56,12 +56,18 @@
     <!--Projects section-->
     <section id="projects">
       <h2>Look some of my recent projects</h2><br>
-      <p id="flechas" class="scale-in-hor-center">→ → →</p>
-
+      <div id="radioProjects">
+        <input type="radio" id="project1" name="radioButtonsProjects" value="0" class="radioButtons"><br>
+        <label for="project1"></label>
+        <input type="radio" id="project2" name="radioButtonsProjects" value="1" class="radioButtons"><br>
+        <label for="project2"></label>
+        <input type="radio" id="project3" name="radioButtonsProjects" value="2" class="radioButtons"><br>
+        <label for="project3"></label>
+      </div>
 
       <div id="sliderInner">
 
-        <div id="porto">
+        <div id="porto" class="divSlider">
           <h3><a href="https://diosdenada.github.io/Port-O-Burger/"></a>Port-O-Burger</a></h3>
           <a href="https://diosdenada.github.io/Port-O-Burger/"><img class="imgProjects"
               src="resources\imgs\portoBig.png" alt="foto de una hamburguesa"></a>
@@ -79,7 +85,7 @@
           </ul>
         </div>
 
-        <div id="sanMichi">
+        <div id="sanMichi" class="divSlider">
           <h3><a href="https://diosdenada.github.io/VeterinariaSanMichi/"></a>Veterinaria San Michi</a></h3>
           <a href="https://diosdenada.github.io/VeterinariaSanMichi/"><img class="imgProjects"
               src="resources\imgs\sanMichiBig.png" alt="foto de la página principal de Veterinaria San Michi"></a>
@@ -99,7 +105,7 @@
         </div>
 
 
-        <div id="calculadoras" class="lastSlide">
+        <div id="calculadoras" class="divSlider">
           <h3><a href="https://diosdenada.github.io/Calculadoras-Practicas/"></a>Cálculos prácticos</a></h3>
           <a href="https://diosdenada.github.io/Calculadoras-Practicas/"><img class="imgProjects"
               src="resources\imgs\calculadorasBig.png" alt="foto de la página principal de Calculadoras Practicas"></a>
@@ -130,62 +136,64 @@
         Source, UI & UX, and User Research, in addition several technologies that fascinate me every time I read
         something new about them. I can communicate in English and Español.</p>
 
-        <div id="tecnologias">
+      <div id="tecnologias">
 
-      <h3>Technologies I have worked with</h3>
-      <div id="workedTecnologies">
-        <img src="resources\icons\html.svg" alt="logo HTML">
-        <img src="resources\icons\css.svg" alt="logo CSS">
-        <img src="resources\icons\javascript.svg" alt="logo JavaScript">
-        <img src="resources\icons\figma.svg" alt="logo Figma">
-        <img src="resources/icons/git.svg" alt="logo Git">
-      </div>
+        <h3>Technologies I have worked with</h3>
+        <div id="workedTecnologies">
+          <img src="resources\icons\html.svg" alt="logo HTML">
+          <img src="resources\icons\css.svg" alt="logo CSS">
+          <img src="resources\icons\javascript.svg" alt="logo JavaScript">
+          <img src="resources\icons\figma.svg" alt="logo Figma">
+          <img src="resources/icons/git.svg" alt="logo Git">
+        </div>
 
-      <h3>Technologies that I am learning</h3>
-      <div id="learningTecnologies">
-        <img src="resources\icons\beFunky_EditorFotosDiseño.png" alt="logo BeFunky">
-        <img src="resources\icons\sass.svg" alt="logo Sass">
-        <img src="resources\icons\typeScript.svg" alt="logo TypeScript">
-        <img src="resources\icons\tailwind.svg" alt="logo Tailwind">
-        <img src="resources\icons\mongo.svg" alt="logo Mongo DB">
-      </div>
+        <h3>Technologies that I am learning</h3>
+        <div id="learningTecnologies">
+          <img src="resources\icons\jquery.svg" alt="logo JQuery">
+          <img src="resources\icons\tailwind.svg" alt="logo Tailwind">
+          <img src="resources\icons\beFunky_EditorFotosDiseño.png" alt="logo BeFunky" class="roundedCorner">
+          <img src="resources\icons\mongo.svg" alt="logo Mongo DB">
+        </div>
 
-      <h3>Technologies I want to learn soon</h3>
-      <div id="futureTenologies">
+        <h3>Technologies I want to learn soon</h3>
+        <div id="futureTenologies">
 
-        <img src="resources\icons\bootstrap.svg" alt="logo Bootstrap">
-        <img src="resources\icons\ember.svg" alt="logo Ember">
-        <img src="resources\icons\foundationFramework.png" alt="logo Foundation">
-        <img src="resources\icons\jquery.svg" alt="logo JQuery">
-        <img src="resources\icons\nodeJS.svg" alt="logo Node JS">
-        <img src="resources\icons\npm.svg" alt="logo npm">
-        <img src="resources\icons\p5JS.png" alt="logo p5JS">
-        <img src="resources\icons\phaser.png" alt="logo Phaser">
-        <img src="resources\icons\preactFramework.png" alt="logo Preact">
-        <img src="resources\icons\react.svg" alt="logo React">
-        <img src="resources\icons\vue.svg" alt="logo Vue">
-      </div>
+          <img src="resources\icons\bootstrap.svg" alt="logo Bootstrap">
+          <img src="resources\icons\ember.svg" alt="logo Ember">
+          <img src="resources\icons\foundationFramework.png" alt="logo Foundation" class="roundedCorner">
+          <img src="resources\icons\sass.svg" alt="logo Sass">
+          <img src="resources\icons\nodeJS.svg" alt="logo Node JS">
+          <img src="resources\icons\npm.svg" alt="logo npm">
+          <img src="resources\icons\p5JS.png" alt="logo p5JS" class="roundedCorner">
+          <img src="resources\icons\phaser.png" alt="logo Phaser" class="roundedCorner">
+          <img src="resources\icons\preactFramework.png" alt="logo Preact" class="roundedCorner">
+          <img src="resources\icons\react.svg" alt="logo React">
+          <img src="resources\icons\vue.svg" alt="logo Vue">
+          <img src="resources\icons\typeScript.svg" alt="logo TypeScript" class="roundedCorner2">
+        </div>
 
       </div>
 
     </section>
 
-
-
     <!--Contact section-->
     <h2>Contact</h2>
     <section id="contact">
-    I would love to participate in your projects.<br>
-    I can work in place (depending on location) or remotely, I perform very well when working in a team as well as alone.<br>
-    Together we can create something new and sharp.<br>
-    <div>
-    <a href="https://github.com/diosDeNada" target="_blank"><img src="resources\icons\github.svg" alt="logo de GitHub" class="contactos"></a>
-    <a href="mailto:ariegonzaguer@gmail.com?Subject=Interesado%20en%20trabajar%20con%20ud" target="_blank"><img src="resources\icons\gmail.svg" alt="logo de Gmail" class="contactos"></a>
-    <a href="https://www.linkedin.com/in/ariel-gonzales-ag%C3%BCero-959293276/" target="_blank"><img src="resources\icons\linkedin.svg" alt="logo de Linkedin" class="contactos"></a>
-    </div>
-    Click the button and get the future of your next project.<br>
-    <button id="suerte">Suerte</button>
-    <div id="futuro" class="sombraHeader"></div>
+      <p>I would love to participate in your projects.<br>
+      I can work in place (depending on location) or remotely, I perform very well when working in a team as well as
+      alone.<br>
+      Together we can create something beautiful and fun.</p><br>
+      <div id="enlacesContacto">
+        <a href="https://github.com/diosDeNada" target="_blank"><img src="resources\icons\github.svg"
+            alt="logo de GitHub" class="contactos"></a>
+        <a href="mailto:ariegonzaguer@gmail.com?Subject=Interesado%20en%20trabajar%20con%20ud" target="_blank"><img
+            src="resources\icons\gmail.svg" alt="logo de Gmail" class="contactos"></a>
+        <a href="https://www.linkedin.com/in/ariel-gonzales-ag%C3%BCero-959293276/" target="_blank"><img
+            src="resources\icons\linkedin.svg" alt="logo de Linkedin" class="contactos"></a>
+      </div>
+      <p>Click the button and get the future of your next project.</p><br>
+      <button id="suerte">Try you Luck!</button>
+      <div id="futuro" class="sombraHeader"></div>
     </section>
 
   </main>
