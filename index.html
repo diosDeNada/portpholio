@@ -20,7 +20,7 @@
 <body>
 
   <!-- Header + Nav section -->
-  <header id="header" class="sombraHeader lineaHeader">
+  <header id="header" class="sombraHeader lightHeader">
     <h1 class="tracking-in-expand">Arie Gonz Aguer</h1>
     <h2>Web Development, Design and Solutions</h2>
     <nav>
@@ -33,9 +33,9 @@
 
     <div id="modoColor">
       <label for="colorPagina"></label>
-      <img src="resources\icons\sun_ligthMode.png" alt="ícono modo claro" class="iconoModo">
+      <img src="resources\icons\sun_ligthMode.png" alt="modo claro" class="iconoModo">
       <input type="range" id="colorPagina" name="colorPagina" min="0" max="1" value="0" />
-      <img src="resources\icons\moon_darMode.png" alt="ícono modo oscuro" class="iconoModo">
+      <img src="resources\icons\moon_darMode.png" alt="modo oscuro" class="iconoModo">
     </div>
   </header>
 
@@ -192,8 +192,8 @@
             src="resources\icons\linkedin.svg" alt="logo de Linkedin" class="contactos"></a>
       </div>
       <p>Click the button and get the future of your next project.</p><br>
-      <button id="suerte">Try you Luck!</button>
-      <div id="futuro" class="sombraHeader"></div>
+      <button id="suerte" aria-label="Try your Luck and discover the future of your next project">Try your Luck!</button>
+      <div id="futuro" class="sombraHeader" aria-live="polite">Your project will be...</div>
     </section>
 
   </main>

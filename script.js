@@ -26,7 +26,7 @@ colorPagina.addEventListener("input", () => {
     });
     header.classList.add("sombraHeader");
     header.classList.remove("neonHeader");
-    header.style.backgroundColor = "white";
+    header.classList.remove("darkHeader");
     futuro.classList.remove("neonFuturo");
     futuro.classList.add("sombraHeader");
     footer.style.backgroundColor = "black";
@@ -39,7 +39,7 @@ colorPagina.addEventListener("input", () => {
     });
     header.classList.remove("sombraHeader");
     header.classList.add("neonHeader");
-    header.style.backgroundColor = "black";
+    header.classList.add("darkHeader");
     futuro.classList.add("neonFuturo");
     footer.style.backgroundColor = "pink";
     footer.style.color = "black";

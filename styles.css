@@ -53,17 +53,25 @@ header {
   margin-bottom: 80px;
   position: sticky;
   top: 0;
-  background-color: white;
   z-index: 1;
+}
+
+.lightHeader {
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#f745e8 1.3px, #e5e5f7 1.3px); /*patrón obtenido de: https://www.magicpattern.design/tools/css-backgrounds*/
+  background-size: 26px 26px;
+  border-bottom: 2px white solid;
+}
+
+.darkHeader {
+  background-color: #000000;
+  background-image: radial-gradient(#f745e8 1.3px, black 1.3px); /*patrón obtenido de: https://www.magicpattern.design/tools/css-backgrounds*/
+  background-size: 26px 26px;
 }
 
 .sombraHeader {
   -moz-box-shadow: 0 10px 5px #888888;
   box-shadow: 0 10px 5px #888888;
-}
-
-.lineaHeader {
-  border-bottom: 2px white solid;
 }
 
 .neonHeader {
@@ -72,6 +80,7 @@ header {
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  /* estilo creado por: https://codepen.io/wander031180 */
 }
 
 header h1 {
@@ -119,7 +128,7 @@ nav a {
 #aboutMe {
   display: grid;
   grid-template: 15% 85% / repeat(2, 1fr);
-  height: 510px;
+  height: 435px;
   margin: 0 5px 80px;
 }
 
@@ -142,6 +151,7 @@ nav a {
 
 #aboutMe p {
   grid-area: 2/1/3/2;
+  padding: 5px;
 }
 
 #aboutMe .iconoAboutMe {
@@ -151,8 +161,6 @@ nav a {
 }
 
 /*4. Projects styles*/
-
-
 #projects {
   height: auto;
   margin-bottom: 80px;
@@ -182,6 +190,7 @@ nav a {
 #radioProjects {
   display: inline-flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .radioButtons {
@@ -240,6 +249,7 @@ nav a {
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  /* estilo creado por: https://codepen.io/wander031180, ligeramente modificado por diosDeNada */
 }
 
 .contactos {
@@ -251,7 +261,7 @@ nav a {
 #futuro {
   width: 90%;
   margin: 5px auto;
-  height: 50px;
+  height: auto;
   padding: 15px;
 }
 
@@ -275,6 +285,10 @@ footer p {
 /*8. Media queries*/
 /* desde tablets hasta laptops */
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+
   #aboutMe {
     width: 80%;
     height: auto;
@@ -296,7 +310,6 @@ footer p {
   .imgProjects {
     height: auto;
     width: 745px;
-    /*el tamañao de la img define, por algún motivo, el tamaño del div... por más que cambio el width del div, su ancho no cambia, a menos que cambie el width de la img*/
     margin-bottom: 10px;
   }
 
@@ -304,12 +317,20 @@ footer p {
 
 /* desde laptops hasta panatllas grandes */
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  main h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
   header li:hover {
     font-size: 1.2rem;
   }
 
   main h2:hover {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   #aboutMe {
@@ -336,7 +357,7 @@ footer p {
 
   .imgProjects {
     height: auto;
-    width: 1320px;
+    width: 950px;
     margin-bottom: 10px;
   }
 
@@ -344,14 +365,15 @@ footer p {
     width: 100%;
   }
 
-  #tecnologias img:hover, .contactos:hover {
+  #tecnologias img:hover,
+  .contactos:hover {
     transition: width 1s, height 1s;
     width: auto;
     height: 76px;
   }
 
   #tecnologias img {
-  margin: 0 20px;
+    margin: 0 20px;
   }
 
 }

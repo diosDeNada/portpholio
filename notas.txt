@@ -1,6 +1,0 @@
-reducir tamaño img en proyectos y agregar un fondo con textura a cada div.
-aumentar tamaño div fururo para pantallas NO grandes
-bjar un poco los radio buttons
-aumentar tamaño fuente nombre de proyectos
-reducir padding texto sbre mi, un poquito
-agregar modo michi oculto
