@@ -1,4 +1,4 @@
-Hola :sunglasses:\
+# Hola :sunglasses:
 
 Welcome and welcome to my first portfolio as a Front End Developer 🖳\
 In this project you will be able to find information about who I am, what I do and what I am learning, as well as you will be able to see the last three projects I have done.\
