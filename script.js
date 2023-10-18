@@ -19,7 +19,7 @@ const futuro = document.getElementById("futuro");
 // modo claro/oscuro
 colorPagina.addEventListener("input", () => {
   if (colorPagina.value === "0") {
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "rgb(230, 228, 228)";
     document.body.style.color = "black";
     navLinks.forEach((link) => {
       link.style.color = "rgb(66, 66, 66)";
