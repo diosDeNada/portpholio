@@ -1,8 +1,8 @@
 # Hola :sunglasses:
 
 Welcome to my first portfolio as a Front End Developer 🖳\
-In this project you will be able to find information about who I am, what I do and what I am learning, as well as you will be able to see the last three projects I have done.\
-To create this portfolio I have used HTML, CSS and JavaScript, as well as tools to generate CSS effects.\
+In this project you will be able to find information about who I am, what I do and what I am learning, also you will be able to see the last three projects I have done.\
+To create this portfolio I have used HTML, CSS and JavaScript, as well as tools to generate some CSS effects.\
 The project has the functionality of light mode :sunny: and dark mode :first_quarter_moon_with_face:, a small "slider" that works with radio buttons to visualize the different projects and a ":crystal_ball: lucky fortune teller" about what your project will be like.\
 It is responsive for the most currently used screen sizes (from 425px to large monitors 🖥️, including tablets and phones :iphone: of various sizes).\
 I have a lot to learn and improve, and I am on the right path :dart:\
