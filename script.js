@@ -27,7 +27,6 @@ window.addEventListener("scroll", () => {
     header.style.top = "-150px"; // Ocultar el encabezado
     header.classList.remove("scale-in-ver-top");
   }
-
   prevScrollPos = currentScrollPos;
 });
 
