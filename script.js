@@ -1,4 +1,5 @@
 // Constantes
+let prevScrollPos = window.scrollY; // la posición antes del scroll
 const claridadBtn = document.getElementById("claridad");
 const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces dentro de "nav"
 const header = document.getElementById("header");
@@ -15,6 +16,21 @@ const futuro = document.getElementById("futuro");
 
 
 // Event listeners
+
+// mostrar u ocultar barra según scroll
+window.addEventListener("scroll", () => {
+  let currentScrollPos = window.scrollY;
+  if (prevScrollPos > currentScrollPos) { // El usuario se desplaza hacia arriba
+    header.style.top = "0"; // Mostrar el encabezado
+    header.classList.add("scale-in-ver-top");
+  } else { // El usuario se desplaza hacia abajo
+    header.style.top = "-150px"; // Ocultar el encabezado
+    header.classList.remove("scale-in-ver-top");
+  }
+
+  prevScrollPos = currentScrollPos;
+});
+
 
 // modo claro/oscuro
 colorPagina.addEventListener("input", () => {
@@ -62,6 +78,6 @@ radioButtonsProjects.forEach((radioButton, index) => {
 // botón de la suerte
 suerteBtn.addEventListener("click", () => {
   let posibilidades = ["A visually appealing website that reflects your brand identity", "A beatiful website that is easy for visitors to navigate", "A search engine optimized (SEO) website", "A website that offers an interactive experience to users", "A website accessible to everyone, and thus reach the largest possible audience"];
-  let randomNum = Math.floor(Math.random()* posibilidades.length);
+  let randomNum = Math.floor(Math.random() * posibilidades.length);
   futuro.innerText = posibilidades[randomNum];
 })
