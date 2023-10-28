@@ -21,10 +21,10 @@ const futuro = document.getElementById("futuro");
 window.addEventListener("scroll", () => {
   let currentScrollPos = window.scrollY;
   if (prevScrollPos > currentScrollPos) { // El usuario se desplaza hacia arriba
-    header.style.top = "0"; // Mostrar el encabezado
+    header.style.top = "0"; // Mostrar el header
     header.classList.add("scale-in-ver-top");
   } else { // El usuario se desplaza hacia abajo
-    header.style.top = "-150px"; // Ocultar el encabezado
+    header.style.top = "-150px"; // Ocultar el header
     header.classList.remove("scale-in-ver-top");
   }
   prevScrollPos = currentScrollPos;
@@ -33,7 +33,7 @@ window.addEventListener("scroll", () => {
 
 // modo claro/oscuro
 colorPagina.addEventListener("input", () => {
-  if (colorPagina.value === "0") {
+  if (colorPagina.value === "0") { // modo claro
     document.body.style.backgroundColor = "rgb(230, 228, 228)";
     document.body.style.color = "black";
     navLinks.forEach((link) => {
@@ -46,7 +46,7 @@ colorPagina.addEventListener("input", () => {
     futuro.classList.add("sombraHeader");
     footer.style.backgroundColor = "black";
     footer.style.color = "white";
-  } else {
+  } else { // modo oscuro
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
     navLinks.forEach((link) => {
