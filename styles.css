@@ -341,7 +341,7 @@ footer p {
 }
 
 /* desde laptops hasta panatllas grandes */
-@media only screen and (min-width: 1024px) and (max-width: 1441px) {
+@media only screen and (min-width: 1024px) and (max-width: 2000px) {
   main h2 {
     font-size: 1.7rem;
   }
@@ -401,6 +401,10 @@ footer p {
     margin: 0 20px;
   }
 
+}
+
+@media only screen and (min-width: 2001px) and (max-width: 2561px){
+  /* pendiente */
 }
 
 /*9. Animations */
