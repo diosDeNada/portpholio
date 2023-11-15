@@ -1,0 +1,2 @@
+pendiente:
+media queries para pantallas muy grandes
